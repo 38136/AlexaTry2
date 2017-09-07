@@ -32,15 +32,11 @@ alexaApp.launch(function(request, response) {
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
 
-alexaApp.intent("WelcomeIntent", {
-    "slots": { "NAME": "LITERAL" },
-    "utterances": [
-      "my {name is|name's} {names|NAME}", "set my name to {names|NAME}"
-    ]
-  },
-  function(request, response) {
-    response.say("Success!");
-  }
+alexaApp.intent('WelcomeIntent',function(request,response) {
+response.say("Thanks have a nice day");	
+ }
 );
+
+
 
 app.listen(PORT, () => console.log("Listening on port " + PORT + "."));
